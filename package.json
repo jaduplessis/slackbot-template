@@ -1,0 +1,43 @@
+{
+  "name": "@slackbot-traduire-gpt/root",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@swarmion/nx-plugin": "^0.29.0",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "aws-sdk": "^2.1456.0",
+    "dependency-cruiser": "^13.0.0",
+    "eslint": "^8.29.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "lodash": "^4.17.21",
+    "npm-audit-resolver": "^3.0.0-7",
+    "nx": "16.1.0",
+    "prettier": "^2.8.1",
+    "syncpack": "^10.0.0",
+    "turbo": "^1.13.3",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": "^18.16.1"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@9.0.6",
+  "private": true,
+  "scripts": {
+    "bootstrap": "cdk bootstrap",
+    "ci:bootstrap": "cdk bootstrap --require-approval=never",
+    "ci:deploy": "cdk deploy --require-approval=never",
+    "ci:destroy": "cdk destroy --force --require-approval=never",
+    "clean": "rm -rf node_modules",
+    "deploy": "cdk deploy",
+    "destroy": "cdk destroy --force",
+    "test": "vitest run --coverage --passWithNoTests",
+    "test-inte": "vitest run --coverage --passWithNoTests -c vitest.test-inte.config.ts"
+  }
+}
