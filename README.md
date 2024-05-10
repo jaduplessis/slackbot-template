@@ -1,14 +1,8 @@
-# Event-Driven Slack Application
-
-This project demonstrates how to build a custom Slack application using serverless event-driven architectures on AWS to enable cross organizational communication within a multilingual teams by providing real-time message translation.
-
-The interaction between deployed infrastructure and Slack is handled using the Javascript Bolt framework, which simplifies the process of building Slack apps by providing a simple and intuitive API for handling events and actions.
-
-This application can be downloaded to your Slack workspace using this link:
+# Slack Application Template
 
 ## Overview
 
-The application is triggered by Slack events that are routed through AWS EventBridge to relevant Lambda functions, which handle different actions like opening the app home, translating messages and setting language preferences. This setup allows for scaling without the complexity of managing a dedicated server, offering a robust solution for enhancing the functionality of Slack within an organization.
+This repository serves as a template for building a Slack applications using serverless event-driven architectures on AWS. The template covers the basic auth set up for multi workspace deployments and how to handle different Slack events.
 
 ## Architecture
 
@@ -33,10 +27,11 @@ The architecture of the application is as follows:
 ### Deploying the Backend
 
 1. Clone this repository.
-2. Navigate to the cloned directory and run `pnpm install` to install dependencies.
-3. Have your aws credentials configured in your environment.
-4. Deploy the application using using the command `pnpm ci:deploy -c stage=dev`.
-5. Note the api endpoint from the output of the deployment.
+2. Navigate to the cloned directory and then to the **services/slack-interface** directory.
+3. Run `pnpm install` to install dependencies.
+4. Have your aws credentials configured in your environment.
+5. Deploy the application using using the command `pnpm ci:deploy -c stage=dev`.
+6. Note the api endpoint from the output of the deployment.
 
 ### Linking Slack App to Backend
 
@@ -45,16 +40,7 @@ The architecture of the application is as follows:
 
 ## Usage
 
-Once deployed and configured, the application will look something like this:
-
-![Home Page](docs/HomePage.png)
-
-You can submit or remove an OpenAI API key or update the language preference in the app home.
-You can add the app to a channel by running the command `/invite @traduire-gpt` in the channel.
-The app will automatically translate messages sent in channels based on the language preference set by the user.
-The language preferences will translate any language to your primary language. If the orginal message is in your primary language, it will be translated to the secondary language.
-
-![Translation](docs/Translation.png)
+Copy this repository to your own repository and start building your own Slack application. The template provides a basic structure for handling Slack events and commands.
 
 ## Contributing
 
